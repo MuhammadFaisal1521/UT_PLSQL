@@ -1,0 +1,12 @@
+begin 
+/*Add Transaction*/
+ut_plsql.ADD_LOG(P_LOG_NAME => 'Log Name Here',P_LOG_VALUES => 'Log values');
+commit;
+
+end;
+
+
+begin 
+/*View log Details*/
+ut_plsql.DISPLAY_LOG(P_LOG_ID => 1);
+end;

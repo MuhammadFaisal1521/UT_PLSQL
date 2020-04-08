@@ -1,0 +1,18 @@
+Drop table PLSQL_LOG;
+
+CREATE TABLE PLSQL_LOG
+( LOG_ID                  NUMBER,
+  LOG_DATE                DATE,
+  CREATED_BY              VARCHAR2(200),
+  LOG_NAME                VARCHAR2(200),
+  LOG_INDEX               Number,
+  LOG_VALUES              VARCHAR2(4000),
+  Value_Checked           Char(1) Default 'N',
+  FORMAT_CALL_STACK       VARCHAR2(4000),
+  FORMAT_ERROR_STACK      VARCHAR2(4000),
+  FORMAT_ERROR_BACKTRACE  VARCHAR2(4000),
+  GET_CPU_TIME            NUMBER,
+  DETAILS                 CLOB
+);
+
+create sequence PLSQL_LOG_seq start with 1 nocache nocycle
